@@ -1,0 +1,1 @@
+checks.o: checks.c
