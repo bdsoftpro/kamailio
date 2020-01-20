@@ -1,5 +1,5 @@
 [Unit]
-Description=Kamailio (OpenSER) - the Open Source SIP Server
+Description=Kamailio the Open Source SIP Server
 Wants=network-online.target
 After=network-online.target
 
@@ -16,7 +16,7 @@ EnvironmentFile=-/etc/default/kamailio.d/*
 PIDFile=/run/kamailio/kamailio.pid
 # ExecStart requires a full absolute path
 ExecStart=/usr/sbin/kamailio -P /run/kamailio/kamailio.pid -f $CFGFILE -m $SHM_MEMORY -M $PKG_MEMORY
-Restart=on-failure
+Restart=no
 # /run/kamailio in tmpfs
 RuntimeDirectory=kamailio
 RuntimeDirectoryMode=0770
